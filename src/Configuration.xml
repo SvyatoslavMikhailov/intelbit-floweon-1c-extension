@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses"
+                xmlns:core="http://v8.1c.ru/8.1/data/core"
+                xmlns:v8="http://v8.1c.ru/8.1/data/ui"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Configuration uuid="a1b2c3d4-e5f6-7890-abcd-ef1234567890">
+    <Properties>
+      <Name>intelbit_river</Name>
+      <Synonym>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Интелбит:Река</v8:content>
+        </v8:item>
+      </Synonym>
+      <Comment>Расширение конфигурации для интеграции с Интелбит:Река — HTTPСервисы + EnterpriseData + Webhooks. Apache 2.0.</Comment>
+      <Version>0.0.1</Version>
+      <Vendor>ООО Интелбит</Vendor>
+      <Purpose>Customization</Purpose>
+      <CompatibilityMode>Version8_3_24</CompatibilityMode>
+      <ConfigurationExtensionCompatibilityMode>Version8_3_24</ConfigurationExtensionCompatibilityMode>
+    </Properties>
+    <ChildObjects>
+      <HTTPService>HTTPServices/intelbit_river</HTTPService>
+      <CommonModule>CommonModules/ИнтелбитРекаОбщие</CommonModule>
+      <CommonModule>CommonModules/ИнтелбитРекаАутентификация</CommonModule>
+      <CommonModule>CommonModules/ИнтелбитРекаВебхуки</CommonModule>
+      <CommonModule>CommonModules/ИнтелбитРекаEnterpriseData</CommonModule>
+      <ScheduledJob>ScheduledJobs/ИнтелбитРекаОтправкаВебхуков</ScheduledJob>
+      <InformationRegister>InformationRegisters/ИнтелбитРекаОчередьВебхуков</InformationRegister>
+      <Constant>Constants/ИнтелбитРекаURL</Constant>
+      <Constant>Constants/ИнтелбитРекаСекретWebhook</Constant>
+      <Constant>Constants/ИнтелбитРекаКлиентID</Constant>
+    </ChildObjects>
+  </Configuration>
+</MetaDataObject>

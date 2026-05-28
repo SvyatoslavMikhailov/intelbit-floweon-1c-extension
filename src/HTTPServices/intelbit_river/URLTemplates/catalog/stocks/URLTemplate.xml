@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses"
+                xmlns:v8="http://v8.1c.ru/8.1/data/ui">
+  <URLTemplate uuid="f6a7b8c9-d0e1-2345-f012-678901234567">
+    <Properties>
+      <Name>catalog_stocks</Name>
+      <Template>/catalog/stocks</Template>
+    </Properties>
+    <ChildObjects>
+      <Method>Methods/GET</Method>
+    </ChildObjects>
+  </URLTemplate>
+</MetaDataObject>

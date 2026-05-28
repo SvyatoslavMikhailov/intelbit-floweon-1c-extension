@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses"
+                xmlns:v8="http://v8.1c.ru/8.1/data/ui">
+  <Constant uuid="c5d6e7f8-a9b0-1234-8234-567890123456">
+    <Properties>
+      <Name>ИнтелбитРекаURL</Name>
+      <Synonym>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Интелбит:Река URL</v8:content>
+        </v8:item>
+      </Synonym>
+      <Comment>URL Рекa-сервера для отправки webhook-событий. Пример: https://reka.intelbit.studio/webhooks/1c/</Comment>
+      <Type>
+        <v8:Type>v8:String</v8:Type>
+        <v8:StringQualifiers>
+          <v8:Length>500</v8:Length>
+        </v8:StringQualifiers>
+      </Type>
+    </Properties>
+  </Constant>
+</MetaDataObject>

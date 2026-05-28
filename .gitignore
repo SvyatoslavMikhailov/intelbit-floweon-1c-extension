@@ -1,0 +1,38 @@
+# 1С артефакты сборки
+*.cf
+*.cfu
+*.epf
+*.erf
+*.ert
+*.dt
+*.mft
+*.work
+*.bak
+
+# Конфигуратор
+*.cfl
+*.cfe
+1Cv8.1CL
+1Cv8.1CD
+config.dump
+
+# EDT (Eclipse-based 1C:EDT workspace)
+.metadata/
+.project
+.settings/
+*.launch
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Временные файлы
+*.tmp
+*.swp
+*~

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses"
+                xmlns:v8="http://v8.1c.ru/8.1/data/ui">
+  <ScheduledJob uuid="a7b8c9d0-e1f2-3456-0abc-789012345678">
+    <Properties>
+      <Name>ИнтелбитРекаОтправкаВебхуков</Name>
+      <Synonym>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Интелбит:Река — Отправка вебхуков</v8:content>
+        </v8:item>
+      </Synonym>
+      <Comment>Отправляет накопленные webhook-события из регистра сведений на Река-сервер. Периодичность: каждые 60 секунд.</Comment>
+      <MethodName>ИнтелбитРекаВебхуки.ОтправитьПакетСобытий</MethodName>
+      <Description>Отправка исходящих webhook-событий в Интелбит:Река</Description>
+      <Use>true</Use>
+      <RepeatPeriodInDay>0</RepeatPeriodInDay>
+      <DaysRepeatPeriod>0</DaysRepeatPeriod>
+      <RepeatPause>60</RepeatPause>
+    </Properties>
+  </ScheduledJob>
+</MetaDataObject>

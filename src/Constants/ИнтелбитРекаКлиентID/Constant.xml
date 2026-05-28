@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses"
+                xmlns:v8="http://v8.1c.ru/8.1/data/ui">
+  <Constant uuid="e7f8a9b0-c1d2-3456-a456-789012345678">
+    <Properties>
+      <Name>ИнтелбитРекаКлиентID</Name>
+      <Synonym>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Интелбит:Река Client ID</v8:content>
+        </v8:item>
+      </Synonym>
+      <Comment>OAuth 2.1 Client ID для аутентификации входящих запросов от Реки (prod). Для dev-окружений используется Basic Auth.</Comment>
+      <Type>
+        <v8:Type>v8:String</v8:Type>
+        <v8:StringQualifiers>
+          <v8:Length>200</v8:Length>
+        </v8:StringQualifiers>
+      </Type>
+    </Properties>
+  </Constant>
+</MetaDataObject>

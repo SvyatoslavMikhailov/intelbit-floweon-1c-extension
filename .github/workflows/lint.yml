@@ -1,0 +1,22 @@
+name: BSL Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  bsl-lint:
+    runs-on: ubuntu-latest
+    # TODO: подключить bsl-language-server после релиза v0.1.0
+    # Сейчас — placeholder, проверяем только валидность XML-файлов
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate XML files
+        run: |
+          find src -name "*.xml" | while read f; do
+            xmllint --noout "$f" || exit 1
+          done
+          echo "All XML files valid"

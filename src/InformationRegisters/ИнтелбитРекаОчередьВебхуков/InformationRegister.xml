@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses"
+                xmlns:v8="http://v8.1c.ru/8.1/data/ui">
+  <InformationRegister uuid="b8c9d0e1-f2a3-4567-1bcd-890123456789">
+    <Properties>
+      <Name>ИнтелбитРекаОчередьВебхуков</Name>
+      <Synonym>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Интелбит:Река — Очередь вебхуков</v8:content>
+        </v8:item>
+      </Synonym>
+      <Comment>Буфер исходящих webhook-событий для отправки на Река-сервер с поддержкой повторных попыток.</Comment>
+      <WriteMode>Independent</WriteMode>
+      <Periodicity>Nonperiodical</Periodicity>
+    </Properties>
+    <Dimensions>
+      <Dimension uuid="c9d0e1f2-a3b4-5678-2cde-901234567890">
+        <Properties>
+          <Name>EventID</Name>
+          <Synonym>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>ИДСобытия</v8:content>
+            </v8:item>
+          </Synonym>
+          <Type>
+            <v8:Type>v8:String</v8:Type>
+            <v8:StringQualifiers>
+              <v8:Length>36</v8:Length>
+              <v8:AllowedLength>Fixed</v8:AllowedLength>
+            </v8:StringQualifiers>
+          </Type>
+        </Properties>
+      </Dimension>
+    </Dimensions>
+    <Resources>
+      <Resource uuid="d0e1f2a3-b4c5-6789-3def-012345678901">
+        <Properties>
+          <Name>EventType</Name>
+          <Synonym>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>ТипСобытия</v8:content>
+            </v8:item>
+          </Synonym>
+          <Type>
+            <v8:Type>v8:String</v8:Type>
+            <v8:StringQualifiers>
+              <v8:Length>100</v8:Length>
+            </v8:StringQualifiers>
+          </Type>
+        </Properties>
+      </Resource>
+      <Resource uuid="e1f2a3b4-c5d6-7890-4ef0-123456789012">
+        <Properties>
+          <Name>Payload</Name>
+          <Synonym>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>Тело</v8:content>
+            </v8:item>
+          </Synonym>
+          <Type>
+            <v8:Type>v8:String</v8:Type>
+            <v8:StringQualifiers>
+              <v8:Length>0</v8:Length>
+              <v8:AllowedLength>Variable</v8:AllowedLength>
+            </v8:StringQualifiers>
+          </Type>
+        </Properties>
+      </Resource>
+      <Resource uuid="f2a3b4c5-d6e7-8901-5f01-234567890123">
+        <Properties>
+          <Name>OccurredAt</Name>
+          <Synonym>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>ВремяСобытия</v8:content>
+            </v8:item>
+          </Synonym>
+          <Type>
+            <v8:Type>v8:Date</v8:Type>
+            <v8:DateQualifiers>
+              <v8:DateFractions>DateTime</v8:DateFractions>
+            </v8:DateQualifiers>
+          </Type>
+        </Properties>
+      </Resource>
+      <Resource uuid="a3b4c5d6-e7f8-9012-6012-345678901234">
+        <Properties>
+          <Name>Attempts</Name>
+          <Synonym>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>КоличествоПопыток</v8:content>
+            </v8:item>
+          </Synonym>
+          <Type>
+            <v8:Type>v8:Number</v8:Type>
+            <v8:NumberQualifiers>
+              <v8:Digits>3</v8:Digits>
+              <v8:FractionDigits>0</v8:FractionDigits>
+            </v8:NumberQualifiers>
+          </Type>
+        </Properties>
+      </Resource>
+      <Resource uuid="b4c5d6e7-f8a9-0123-7123-456789012345">
+        <Properties>
+          <Name>LastError</Name>
+          <Synonym>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>ПоследняяОшибка</v8:content>
+            </v8:item>
+          </Synonym>
+          <Type>
+            <v8:Type>v8:String</v8:Type>
+            <v8:StringQualifiers>
+              <v8:Length>500</v8:Length>
+            </v8:StringQualifiers>
+          </Type>
+        </Properties>
+      </Resource>
+    </Resources>
+  </InformationRegister>
+</MetaDataObject>

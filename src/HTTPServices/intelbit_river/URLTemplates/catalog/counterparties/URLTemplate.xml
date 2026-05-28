@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses"
+                xmlns:v8="http://v8.1c.ru/8.1/data/ui">
+  <URLTemplate uuid="e5f6a7b8-c9d0-1234-ef01-567890123456">
+    <Properties>
+      <Name>catalog_counterparties</Name>
+      <Template>/catalog/counterparties</Template>
+    </Properties>
+    <ChildObjects>
+      <Method>Methods/GET</Method>
+    </ChildObjects>
+  </URLTemplate>
+</MetaDataObject>

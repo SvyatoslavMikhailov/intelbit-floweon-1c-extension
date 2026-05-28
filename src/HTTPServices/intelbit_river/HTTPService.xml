@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses"
+                xmlns:v8="http://v8.1c.ru/8.1/data/ui">
+  <HTTPService uuid="b2c3d4e5-f6a7-8901-bcde-f23456789012">
+    <Properties>
+      <Name>intelbit_river</Name>
+      <Synonym>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>ИнтелбитРека</v8:content>
+        </v8:item>
+      </Synonym>
+      <Comment>HTTP-сервис Интелбит:Река — REST API для интеграции с маркетплейсами и внешними системами.</Comment>
+      <RootURL>/intelbit_river</RootURL>
+      <ReuseSessions>DontUse</ReuseSessions>
+      <MaxSessions>10</MaxSessions>
+    </Properties>
+    <ChildObjects>
+      <URLTemplate>URLTemplates/orders</URLTemplate>
+      <URLTemplate>URLTemplates/catalog/products</URLTemplate>
+      <URLTemplate>URLTemplates/catalog/counterparties</URLTemplate>
+      <URLTemplate>URLTemplates/catalog/stocks</URLTemplate>
+    </ChildObjects>
+  </HTTPService>
+</MetaDataObject>
