@@ -1,0 +1,183 @@
+{
+  "info": {
+    "name": "Интелбит:Река — 1С HTTP Services",
+    "description": "Коллекция запросов к HTTPСервисам расширения intelbit_river для тестирования в Postman.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "river-onec-v1"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost/your_1c_base/hs/intelbit_river",
+      "description": "Базовый URL HTTPСервиса 1С"
+    },
+    {
+      "key": "username",
+      "value": "your-client-id",
+      "description": "Значение константы ИнтелбитРекаКлиентID"
+    },
+    {
+      "key": "password",
+      "value": "your-webhook-secret",
+      "description": "Значение константы ИнтелбитРекаСекретWebhook"
+    },
+    {
+      "key": "created_order_ref_key",
+      "value": "",
+      "description": "Заполняется автоматически после создания заказа"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      { "key": "username", "value": "{{username}}", "type": "string" },
+      { "key": "password", "value": "{{password}}", "type": "string" }
+    ]
+  },
+  "item": [
+    {
+      "name": "Каталог",
+      "item": [
+        {
+          "name": "GET Номенклатура (первые 10)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/catalog/products?$top=10&$skip=0",
+              "host": ["{{base_url}}"],
+              "path": ["catalog", "products"],
+              "query": [
+                { "key": "$top",  "value": "10" },
+                { "key": "$skip", "value": "0" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Номенклатура (фильтр по наименованию)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/catalog/products?$filter=Телефон",
+              "host": ["{{base_url}}"],
+              "path": ["catalog", "products"],
+              "query": [
+                { "key": "$filter", "value": "Телефон" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Контрагенты (первые 10)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/catalog/counterparties?$top=10",
+              "host": ["{{base_url}}"],
+              "path": ["catalog", "counterparties"],
+              "query": [
+                { "key": "$top", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Контрагент по ИНН",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/catalog/counterparties?inn=7700000001",
+              "host": ["{{base_url}}"],
+              "path": ["catalog", "counterparties"],
+              "query": [
+                { "key": "inn", "value": "7700000001" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Остатки по складу",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/catalog/stocks?warehouse_key=wh-guid-0001&$top=50",
+              "host": ["{{base_url}}"],
+              "path": ["catalog", "stocks"],
+              "query": [
+                { "key": "warehouse_key", "value": "wh-guid-0001" },
+                { "key": "$top",          "value": "50" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Заказы",
+      "item": [
+        {
+          "name": "POST Создать заказ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json();",
+                  "if (data.ref_key) {",
+                  "    pm.collectionVariables.set('created_order_ref_key', data.ref_key);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type",    "value": "application/json" },
+              { "key": "Idempotency-Key", "value": "{{$guid}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"order_number\": \"ВИТ-2026-0001\",\n  \"order_ref_key\": \"550e8400-e29b-41d4-a716-446655440001\",\n  \"counterparty_ref_key\": \"\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{base_url}}/orders/",
+              "host": ["{{base_url}}"],
+              "path": ["orders", ""]
+            }
+          }
+        },
+        {
+          "name": "GET Заказы (последние 20)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/orders/?$top=20",
+              "host": ["{{base_url}}"],
+              "path": ["orders", ""],
+              "query": [
+                { "key": "$top", "value": "20" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Заказ по ref_key",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/orders/?ref_key={{created_order_ref_key}}",
+              "host": ["{{base_url}}"],
+              "path": ["orders", ""],
+              "query": [
+                { "key": "ref_key", "value": "{{created_order_ref_key}}" }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
