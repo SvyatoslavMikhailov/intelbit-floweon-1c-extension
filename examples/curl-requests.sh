@@ -1,5 +1,5 @@
 #!/bin/bash
-# curl-requests.sh — примеры HTTP-вызовов к HTTPСервисам Интелбит:Река.
+# curl-requests.sh — примеры HTTP-вызовов к HTTPСервисам Интелбит.Фловеон.
 # Замените BASE_URL и CREDENTIALS на реальные значения вашего окружения.
 
 BASE_URL="http://localhost/your_1c_base/hs/intelbit_river"

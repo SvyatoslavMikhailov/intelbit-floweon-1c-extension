@@ -1,8 +1,14 @@
-# intelbit-river-1c-extension
+# intelbit-floweon-1c-extension
 
-Расширение конфигурации 1С (УТ 11.5, КА 2.5, ERP 2.5) для **Интелбит:Река** — открытой интеграционной шины данных для торговых компаний.
+Расширение конфигурации 1С (УТ 11.5, КА 2.5, ERP 2.5) для **Интелбит.Фловеон** — открытой интеграционной шины данных для торговых компаний.
 
 Устанавливается как расширение конфигурации (не правит типовую), что сохраняет поддержку конфигурации клиента.
+
+**Исторические имена объектов.** Имена общих модулей, констант, регистра и регламентного
+задания `ИнтелбитРека*`, HTTP-сервис и расширение `intelbit_river` (`hs/intelbit_river`,
+`intelbit_river.cfe`) — исторические (прежнее имя продукта — Интелбит:Река). Переименование
+запланировано вместе со сборкой расширения на платформе; до этого в документации они
+указаны как есть, чтобы совпадать с метаданными.
 
 ## Что умеет (v0.0.1 — скелет)
 
@@ -10,7 +16,7 @@
 - ⏳ Webhook publisher (catalog.updated / stock.updated / price.updated / order.status.changed) с HMAC-SHA256 — **в реализации**
 - ⏳ EnterpriseData-обёртка для регламентных обменов — **в реализации**
 
-## Что будет в v0.1.0 (MVP Реки)
+## Что будет в v0.1.0 (MVP Фловеона)
 
 - ✅ 5 HTTPСервисов для двусторонней интеграции (orders POST/GET, catalog ×3)
 - ✅ Webhook publisher с retry через регистр сведений + регламентное задание (каждые 60 сек)
@@ -28,7 +34,7 @@
 
 | Константа | Описание |
 |---|---|
-| `ИнтелбитРекаURL` | URL Река-сервера для webhook-событий |
+| `ИнтелбитРекаURL` | URL Фловеон-сервера для webhook-событий |
 | `ИнтелбитРекаСекретWebhook` | Секрет HMAC-SHA256 (≥32 символа) |
 | `ИнтелбитРекаКлиентID` | OAuth Client ID (prod) |
 
@@ -49,8 +55,8 @@ examples/                   # примеры curl и webhook payload
 
 ## Связанные проекты
 
-- **intelbit-river-connector-onec** — Python-клиент, который вызывает эти HTTPСервисы и принимает вебхуки: [github.com/SvyatoslavMikhailov/intelbit-river-connector-onec](https://github.com/SvyatoslavMikhailov/intelbit-river-connector-onec)
-- **Интелбит:Река** — главный продукт (monorepo): [github.com/SvyatoslavMikhailov/intelbit-river-monorepo](https://github.com/SvyatoslavMikhailov/intelbit-river-monorepo)
+- **intelbit-floweon-connector-onec** — Python-клиент, который вызывает эти HTTPСервисы и принимает вебхуки: [github.com/SvyatoslavMikhailov/intelbit-floweon-connector-onec](https://github.com/SvyatoslavMikhailov/intelbit-floweon-connector-onec)
+- **Интелбит.Фловеон** — главный продукт (monorepo): [github.com/SvyatoslavMikhailov/intelbit-floweon-monorepo](https://github.com/SvyatoslavMikhailov/intelbit-floweon-monorepo)
 
 ## Совместимость
 

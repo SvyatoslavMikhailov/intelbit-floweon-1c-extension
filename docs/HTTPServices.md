@@ -1,4 +1,4 @@
-# HTTP-сервисы Интелбит:Река
+# HTTP-сервисы Интелбит.Фловеон
 
 Базовый URL: `http://<server>/<infobase>/hs/intelbit_river`
 

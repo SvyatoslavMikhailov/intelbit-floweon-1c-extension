@@ -1,12 +1,12 @@
-# Webhook-события Интелбит:Река
+# Webhook-события Интелбит.Фловеон
 
-Расширение отправляет события на Рекa-сервер через HTTP POST с HMAC-SHA256 подписью.
+Расширение отправляет события на Фловеон-сервер через HTTP POST с HMAC-SHA256 подписью.
 
 ## Формат подписи
 
 Заголовок: `X-Signature: t=<unix_timestamp>,v1=<hmac_hex>`
 
-Алгоритм вычисления (совместимо с `OneCWebhookReceiver` в `intelbit-river-connector-onec`):
+Алгоритм вычисления (совместимо с `OneCWebhookReceiver` в `intelbit-floweon-connector-onec`):
 
 ```
 payload = f"{timestamp}.{body_bytes}"
@@ -14,7 +14,7 @@ signature = HMAC-SHA256(secret=ИнтелбитРекаСекретWebhook, mess
 header = f"t={timestamp},v1={signature.hex()}"
 ```
 
-Окно replay: 300 секунд (5 минут). Запросы с `|now - t| > 300` отклоняются на стороне Реки.
+Окно replay: 300 секунд (5 минут). Запросы с `|now - t| > 300` отклоняются на стороне Фловеона.
 
 ## Поддерживаемые типы событий
 

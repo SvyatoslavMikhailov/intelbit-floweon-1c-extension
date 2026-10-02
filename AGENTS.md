@@ -1,8 +1,8 @@
-# AGENTS.md — intelbit-river-1c-extension
+# AGENTS.md — intelbit-floweon-1c-extension
 
 ## Назначение репозитория
 
-Расширение конфигурации 1С для **Интелбит:Река**. Содержит BSL-код и XML-структуру объектов метаданных.
+Расширение конфигурации 1С для **Интелбит.Фловеон**. Содержит BSL-код и XML-структуру объектов метаданных.
 
 ## Для AI-агентов
 
@@ -14,5 +14,5 @@
 
 ## Связанные репозитории
 
-- `intelbit-river-connector-onec` — Python-клиент (~/Developer/)
-- `intelbit-river-monorepo` — ядро Реки (~/Developer/)
+- `intelbit-floweon-connector-onec` — Python-клиент (~/Developer/)
+- `intelbit-floweon-monorepo` — ядро Фловеона (~/Developer/)

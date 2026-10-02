@@ -1,4 +1,4 @@
-# Установка расширения intelbit-river-1c-extension
+# Установка расширения intelbit-floweon-1c-extension
 
 ## Требования
 
@@ -8,7 +8,7 @@
 
 ## Вариант 1: установка из .cfe (рекомендуется для prod)
 
-1. Скачайте `.cfe`-файл из [Releases](https://github.com/SvyatoslavMikhailov/intelbit-river-1c-extension/releases).
+1. Скачайте `.cfe`-файл из [Releases](https://github.com/SvyatoslavMikhailov/intelbit-floweon-1c-extension/releases).
 2. Откройте **Конфигуратор** вашей базы данных.
 3. Меню: **Конфигурация → Расширения конфигурации**.
 4. В открывшемся окне: **Добавить из файла** → выберите `intelbit_river.cfe`.
@@ -19,8 +19,8 @@
 
 ```bash
 # Клонировать репозиторий
-git clone git@github.com:SvyatoslavMikhailov/intelbit-river-1c-extension.git
-cd intelbit-river-1c-extension
+git clone git@github.com:SvyatoslavMikhailov/intelbit-floweon-1c-extension.git
+cd intelbit-floweon-1c-extension
 
 # Загрузить в конфигуратор через скрипт
 ./scripts/load-from-files.sh /path/to/1cv8.exe /path/to/infobase
@@ -34,11 +34,11 @@ cd intelbit-river-1c-extension
 
 | Константа | Значение | Пример |
 |---|---|---|
-| `ИнтелбитРекаURL` | URL Река-сервера | `https://reka.intelbit.studio/webhooks/1c/` |
+| `ИнтелбитРекаURL` | URL Фловеон-сервера | `https://floweon.intelbit.studio/webhooks/1c/` |
 | `ИнтелбитРекаСекретWebhook` | Секрет HMAC (≥32 символа) | `my-super-secret-key-32-chars-min` |
 | `ИнтелбитРекаКлиентID` | OAuth Client ID (prod) | `intelbit-onec-prod` |
 
-> **Важно:** значение `ИнтелбитРекаСекретWebhook` должно совпадать с параметром `webhook_secret` в конфигурационном файле `intelbit-river-connector-onec`.
+> **Важно:** значение `ИнтелбитРекаСекретWebhook` должно совпадать с параметром `webhook_secret` в конфигурационном файле `intelbit-floweon-connector-onec`.
 
 ## Публикация HTTPСервиса
 
