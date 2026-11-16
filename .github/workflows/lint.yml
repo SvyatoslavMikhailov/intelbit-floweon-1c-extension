@@ -14,9 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # xmllint нет в образе ubuntu-latest — шаг ниже падал с «xmllint: command not found»
+      # (main красный с 29.05.2026), сами XML валидны.
+      - name: Install xmllint
+        run: sudo apt-get update -q && sudo apt-get install -y -q libxml2-utils
+
       - name: Validate XML files
         run: |
-          find src -name "*.xml" | while read f; do
+          find src -name "*.xml" | while read -r f; do
             xmllint --noout "$f" || exit 1
           done
           echo "All XML files valid"
