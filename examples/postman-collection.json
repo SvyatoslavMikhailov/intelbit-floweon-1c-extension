@@ -1,25 +1,25 @@
 {
   "info": {
     "name": "Интелбит.Фловеон — 1С HTTP Services",
-    "description": "Коллекция запросов к HTTPСервисам расширения intelbit_river для тестирования в Postman.",
+    "description": "Коллекция запросов к HTTPСервисам расширения intelbit_floweon для тестирования в Postman.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_postman_id": "floweon-onec-v1"
   },
   "variable": [
     {
       "key": "base_url",
-      "value": "http://localhost/your_1c_base/hs/intelbit_river",
+      "value": "http://localhost/your_1c_base/hs/intelbit_floweon",
       "description": "Базовый URL HTTPСервиса 1С"
     },
     {
       "key": "username",
       "value": "your-client-id",
-      "description": "Значение константы ИнтелбитРекаКлиентID"
+      "description": "Значение константы ИнтелбитФловеонКлиентID"
     },
     {
       "key": "password",
       "value": "your-webhook-secret",
-      "description": "Значение константы ИнтелбитРекаСекретWebhook"
+      "description": "Значение константы ИнтелбитФловеонСекретWebhook"
     },
     {
       "key": "created_order_ref_key",

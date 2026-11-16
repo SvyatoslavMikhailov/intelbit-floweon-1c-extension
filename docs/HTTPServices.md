@@ -1,6 +1,6 @@
 # HTTP-сервисы Интелбит.Фловеон
 
-Базовый URL: `http://<server>/<infobase>/hs/intelbit_river`
+Базовый URL: `http://<server>/<infobase>/hs/intelbit_floweon`
 
 Аутентификация: `Authorization: Bearer <jwt>` (prod) или HTTP Basic (dev).
 
@@ -59,7 +59,7 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -H "Idempotency-Key: $(uuidgen)" \
   -d @examples/order-create.json \
-  http://localhost/your_base/hs/intelbit_river/orders/
+  http://localhost/your_base/hs/intelbit_floweon/orders/
 ```
 
 ---
@@ -97,7 +97,7 @@ curl -X POST \
 **Пример curl:**
 ```bash
 curl -u admin:password \
-  "http://localhost/your_base/hs/intelbit_river/catalog/products?\$top=10&\$skip=0"
+  "http://localhost/your_base/hs/intelbit_floweon/catalog/products?\$top=10&\$skip=0"
 ```
 
 ---
@@ -111,7 +111,7 @@ curl -u admin:password \
 **Пример curl:**
 ```bash
 curl -u admin:password \
-  "http://localhost/your_base/hs/intelbit_river/catalog/counterparties?inn=7701234567"
+  "http://localhost/your_base/hs/intelbit_floweon/catalog/counterparties?inn=7701234567"
 ```
 
 ---
