@@ -11,7 +11,7 @@
 1. Скачайте `.cfe`-файл из [Releases](https://github.com/SvyatoslavMikhailov/intelbit-floweon-1c-extension/releases).
 2. Откройте **Конфигуратор** вашей базы данных.
 3. Меню: **Конфигурация → Расширения конфигурации**.
-4. В открывшемся окне: **Добавить из файла** → выберите `intelbit_river.cfe`.
+4. В открывшемся окне: **Добавить из файла** → выберите `intelbit_floweon.cfe`.
 5. Нажмите **Обновить конфигурацию базы данных** (F7).
 6. Перезапустите пользовательский режим.
 
@@ -34,11 +34,11 @@ cd intelbit-floweon-1c-extension
 
 | Константа | Значение | Пример |
 |---|---|---|
-| `ИнтелбитРекаURL` | URL Фловеон-сервера | `https://floweon.intelbit.studio/webhooks/1c/` |
-| `ИнтелбитРекаСекретWebhook` | Секрет HMAC (≥32 символа) | `my-super-secret-key-32-chars-min` |
-| `ИнтелбитРекаКлиентID` | OAuth Client ID (prod) | `intelbit-onec-prod` |
+| `ИнтелбитФловеонURL` | URL Фловеон-сервера | `https://floweon.intelbit.studio/webhooks/1c/` |
+| `ИнтелбитФловеонСекретWebhook` | Секрет HMAC (≥32 символа) | `my-super-secret-key-32-chars-min` |
+| `ИнтелбитФловеонКлиентID` | OAuth Client ID (prod) | `intelbit-onec-prod` |
 
-> **Важно:** значение `ИнтелбитРекаСекретWebhook` должно совпадать с параметром `webhook_secret` в конфигурационном файле `intelbit-floweon-connector-onec`.
+> **Важно:** значение `ИнтелбитФловеонСекретWebhook` должно совпадать с параметром `webhook_secret` в конфигурационном файле `intelbit-floweon-connector-onec`.
 
 ## Публикация HTTPСервиса
 
@@ -46,15 +46,15 @@ cd intelbit-floweon-1c-extension
 
 1. Откройте **Администрирование → Публикация на веб-сервере**.
 2. Перейдите на вкладку **HTTP-сервисы**.
-3. Включите `intelbit_river`.
+3. Включите `intelbit_floweon`.
 4. Нажмите **Опубликовать**.
 
-Базовый URL сервиса будет: `http://<server>/<infobase>/hs/intelbit_river/`
+Базовый URL сервиса будет: `http://<server>/<infobase>/hs/intelbit_floweon/`
 
 ## Проверка установки
 
 ```bash
 curl -u admin:password \
-  http://localhost/your_base/hs/intelbit_river/catalog/products
+  http://localhost/your_base/hs/intelbit_floweon/catalog/products
 # Ожидается: {"error": {"code": "ERR_NOT_IMPLEMENTED", ...}} до реализации 4-17-12
 ```

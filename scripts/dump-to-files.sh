@@ -26,6 +26,6 @@ echo "Экспорт конфигурации в $SRC_DIR ..."
 "$ONEC_BIN" DESIGNER \
     /IBConnectionString "$CONNECT_STRING" \
     /DumpConfigToFiles "$SRC_DIR" \
-    /Extension "intelbit_river"
+    /Extension "intelbit_floweon"
 
 echo "Готово. Проверьте изменения командой: git diff src/"

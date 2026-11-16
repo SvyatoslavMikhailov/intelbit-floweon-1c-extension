@@ -26,7 +26,7 @@ echo "Загрузка конфигурации из $SRC_DIR ..."
 "$ONEC_BIN" DESIGNER \
     /IBConnectionString "$CONNECT_STRING" \
     /LoadConfigFromFiles "$SRC_DIR" \
-    /Extension "intelbit_river" \
+    /Extension "intelbit_floweon" \
     /UpdateDBCfg
 
-echo "Готово. Расширение intelbit_river обновлено в базе данных."
+echo "Готово. Расширение intelbit_floweon обновлено в базе данных."
